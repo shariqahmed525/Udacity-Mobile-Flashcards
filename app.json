@@ -4,6 +4,7 @@
     "description": "Flashcard or Study Learning App",
     "slug": "Flashcards",
     "version": "1.0.0",
+    "sdkVersion": "38.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
