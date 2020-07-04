@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "Flashcards",
+    "description": "Flashcard or Study Learning App",
     "slug": "Flashcards",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -17,7 +18,8 @@
       "**/*"
     ],
     "android": {
-      "useNextNotificationsApi": true
+      "useNextNotificationsApi": true,
+      "package": "com.mobileflashcard.org"
     },
     "ios": {
       "supportsTablet": true
