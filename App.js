@@ -1,21 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from 'react';
+import 'react-native-gesture-handler';
+import store from './store';
+import Navigation from './navigation';
+import { Provider } from 'react-redux';
+import AppStatusBar from './components/AppStatusBar';
+import { themeColor, setLocalNotification } from './utils/helper';
 
-export default function App() {
+const App = () => {
+
+  useEffect(() => {
+    setLocalNotification();
+  }, [])
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <AppStatusBar backgroundColor={themeColor} barStyle="light-content" />
+      <Navigation />
+    </Provider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
