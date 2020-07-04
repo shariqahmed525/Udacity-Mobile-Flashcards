@@ -58,6 +58,7 @@ const Quiz = ({ navigation, route }) => {
       }
     }
     setActiveQuestion(activeQuestion + 1);
+    setFlip(false);
   }
 
   return (
