@@ -46,33 +46,6 @@ const Decks = ({ rDecks, navigation }) => {
       )}
     </View>
   );
-
-  // return (
-  //   <ScrollView contentContainerStyle={styles.container}>
-  //     {decks && (
-  //       (!_.isEmpty(decks) && Object.keys(decks).length > 0) ? (
-  //         Object.keys(decks)
-  //           .sort((a, b) => decks[b].timeStamp - decks[a].timeStamp)
-  //           .map(deckId => {
-  //             const title = decks[deckId].title;
-  //             const cards = decks[deckId].cards.length;
-  //             return (
-  //               <Card
-  //                 key={deckId}
-  //                 heading={title}
-  //                 subHeading={`${cards} ${cards > 1 ? "cards" : "card"}`}
-  //                 onPress={() => navigation.navigate('Deck', { title, deckId })}
-  //               />
-  //             )
-  //           })
-  //       ) : (
-  //           <Message
-  //             message="Sorry, you don't have any deck."
-  //           />
-  //         )
-  //     )}
-  //   </ScrollView>
-  // );
 }
 
 const mapStateToProp = ({ reducer }) => {
