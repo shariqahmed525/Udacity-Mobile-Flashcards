@@ -42,20 +42,12 @@ const Quiz = ({ navigation, route }) => {
   const submit = async (type) => {
     if (type === "correct") {
       setScore(score + 1);
-      if ((activeQuestion + 1) === totalQuestions) {
-        await clearLocalNotifications();
-        setLocalNotification();
-        navigate(score + 1);
-        return;
-      }
     }
-    if (type === "incorrect") {
-      if ((activeQuestion + 1) === totalQuestions) {
-        await clearLocalNotifications();
-        setLocalNotification();
-        navigate(score);
-        return;
-      }
+    if ((activeQuestion + 1) === totalQuestions) {
+      await clearLocalNotifications();
+      setLocalNotification();
+      navigate(type === "correct" ? score + 1 : score);
+      return;
     }
     setActiveQuestion(activeQuestion + 1);
     setFlip(false);

@@ -48,7 +48,7 @@ export const setLocalNotification = async () => {
       Permissions.NOTIFICATIONS
     );
     if (permissionsNotifications.status === "granted") {
-      Notifications.cancelAllScheduledNotificationsAsync();
+      // Notifications.cancelAllScheduledNotificationsAsync();
 
       // App will notify user every evening 6 pm if the user has not attempted the quiz
       const tomorrow = new Date();
@@ -68,14 +68,15 @@ export const setLocalNotification = async () => {
         },
       });
 
-      // Scheduling notifications only comes when app is in background mode
+      // Scheduled notifications only comes when app is in background mode
       // Testing schedule a notification 5 seconds from now
       // Notifications.scheduleNotificationAsync({
       //   content: {
       //     ...notificationObj()
       //   },
-      //   trigger: { 
-      //     seconds: 5, repeats: true 
+      //   trigger: {
+      //     seconds: 5,
+      //     repeats: true
       //   },
       // });
 

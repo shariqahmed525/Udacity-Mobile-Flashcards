@@ -14,12 +14,12 @@ const AddCard = ({ route, navigation }) => {
   const submit = async () => {
     const trimAnswer = answer.trim();
     const trimQuestion = question.trim();
-    if (!trimAnswer) {
-      alert("Please enter deck title");
+    if (!trimQuestion) {
+      alert("Please enter question");
       return;
     }
-    if (!trimQuestion) {
-      alert("Please enter deck title");
+    if (!trimAnswer) {
+      alert("Please enter answer");
       return;
     }
     const obj = {
